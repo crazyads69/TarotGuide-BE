@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  be:
+    container_name: tarot_guide_be
+    build: .
+    ports:
+      - "8080:8080" # change port here
+    restart: always
+    networks:
+      - tarot_guide
+
+networks:
+  tarot_guide:
+    driver: bridge
+    external: true

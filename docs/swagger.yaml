@@ -1,0 +1,19 @@
+basePath: /
+externalDocs:
+  description: OpenAPI
+  url: https://swagger.io/resources/open-api/
+host: localhost:8080
+info:
+  contact:
+    email: khiemledev@gmail.com
+    name: Khiem Le
+    url: https://khiemle.dev
+  description: This is the Swagger documentation for golang template.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Golang Template Swagger Documentation
+  version: 0.0.1
+paths: {}
+swagger: "2.0"
