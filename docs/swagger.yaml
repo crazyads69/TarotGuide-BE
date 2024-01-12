@@ -1,4 +1,12 @@
 basePath: /
+definitions:
+  schemas.InputMessage:
+    properties:
+      message:
+        type: string
+    required:
+    - message
+    type: object
 externalDocs:
   description: OpenAPI
   url: https://swagger.io/resources/open-api/
@@ -15,5 +23,27 @@ info:
   termsOfService: http://swagger.io/terms/
   title: Golang Template Swagger Documentation
   version: 0.0.1
-paths: {}
+paths:
+  /chat:
+    post:
+      consumes:
+      - application/json
+      description: Chat message
+      parameters:
+      - description: Chat message
+        in: body
+        name: RequestBody
+        required: true
+        schema:
+          $ref: '#/definitions/schemas.InputMessage'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Chat message
+      tags:
+      - Chat
 swagger: "2.0"

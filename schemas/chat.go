@@ -14,3 +14,7 @@ type ChatInput struct {
 	Message string `gorm:"column:message" json:"message"`
 	Block   bool   `gorm:"column:block" json:"block"`
 }
+
+type InputMessage struct {
+	Message string `json:"message" binding:"required" validate:"required"`
+}
