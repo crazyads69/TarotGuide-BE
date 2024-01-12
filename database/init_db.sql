@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS cards (
 CREATE TABLE IF NOT EXISTS chat_inputs (
   input_id SERIAL PRIMARY KEY,
   message TEXT,
-  block BOOLEAN
+  block BOOLEAN DEFAULT FALSE
 );
 
 -- Bảng chats
@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS chats (
   chat_id SERIAL PRIMARY KEY,
   message TEXT,
   randoms_cards TEXT,
-  feedback BOOLEAN,
+  feedback BOOLEAN DEFAULT FALSE,
   input_id INTEGER REFERENCES chat_inputs(input_id),
-  block BOOLEAN
+  block BOOLEAN DEFAULT FALSE
 );
 
 

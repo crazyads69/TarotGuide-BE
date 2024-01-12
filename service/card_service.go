@@ -67,6 +67,6 @@ func (service *CardService) PickRandomCards(cards []schemas.Card, count int) ([]
 		// Remove the picked card from the cards list to avoid duplicate
 		cards = append(cards[:index], cards[index+1:]...)
 	}
-
+	log.Info().Msgf("Pick random cards successfully: %v", finalCards)
 	return finalCards, nil
 }
